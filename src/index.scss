@@ -13,6 +13,14 @@ ul {
   list-style-type: none;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
 .navbar {
   border-bottom: 1px solid #ccc;
   padding: 20px;
@@ -20,5 +28,24 @@ ul {
     display: flex; 
     justify-content: center;
     gap: 20px;
+  }
+}
+
+.item-list {
+  margin-top: 30px;
+  .item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    h4 { 
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .type span {
+      border: 1px solid #999;
+      display: inline-block;
+      padding: 4px 8px;
+      margin-right: 8px;
+      border-radius: 6px;
+    }
   }
 }
