@@ -34,11 +34,18 @@ const darkMode = createSlice({
   name: 'darkMode', 
   initialState: false,
   reducers: { 
-
+    // 다크모드 변경함수(액션함수)
+    handleDarkmode(state) { 
+      return !state // true | false 바꾸기
+    }
   }
 })
 
 
+// 액션함수 내보내는 설정
+export let { handleDarkmode } = darkMode.actions;
+
+// store 안의 state를 내보내는 설정
 export default configureStore({  
   reducer: {
     pokemon: pokemon.reducer, // 함수를 내보냄

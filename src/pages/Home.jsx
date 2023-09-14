@@ -3,13 +3,23 @@ import { useSelector } from "react-redux"
 export default function Home() {
   // store에서 state가져오기
   let data = useSelector(state => state);
-  // console.log(data);
-  let { pokemon } = data;
-  console.log(pokemon);
+  let { darkMode, pokemon } = data;
+  // console.log(pokemon);
 
   return (
-    <main className="container">
+    <main className={ darkMode ? 'container darkmode' : 'container'}>
       <h1>Home</h1>
+
+      <form>
+        <div className="input-group">
+          <input type="text" name='name' placeholder="이름" />
+        </div>
+        <div className="input-group">
+          <input type="text" name='type' placeholder="타입(복수인 경우 ,로 구분)" />
+        </div>
+        <button type='submit' className="btn btn-primary">추가</button>
+      </form>
+
       <div className="item-list">
         {
           pokemon.map(poke => (
