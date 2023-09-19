@@ -25,7 +25,20 @@ const pokemon = createSlice({
     },
   ],
   reducers: {
-    // 액션함수가 들어감
+    // 액션함수가 들어감(현재값, 들어오는값)
+    addItem (state, action) {
+      // console.log(action.payload)
+      const copy = [...state, action.payload] // 데이터 추가
+      return copy; // 변경된 값 전달
+    },
+    removeItem(state, action) {
+      console.log(action.payload); // id 값
+      const copy = state.filter(item => {
+        // id와 일치하는 않는 자료만 리턴(id값 자료 제거)
+        return item.id !== action.payload;
+      })
+      return copy;
+    }
   }
 })
 
@@ -42,9 +55,6 @@ const darkMode = createSlice({
 })
 
 
-// 액션함수 내보내는 설정
-export let { handleDarkmode } = darkMode.actions;
-
 // store 안의 state를 내보내는 설정
 export default configureStore({  
   reducer: {
@@ -52,3 +62,7 @@ export default configureStore({
     darkMode: darkMode.reducer
   }
 });
+
+// 액션함수 내보내는 설정
+export let { handleDarkmode } = darkMode.actions;
+export let { addItem, removeItem } = pokemon.actions;

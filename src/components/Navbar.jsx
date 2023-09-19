@@ -16,13 +16,13 @@ export default function Navbar() {
         <li className='nav-item'><Link to='/'>Home</Link></li>
         <li className='nav-item'><Link to='/about'>About</Link></li>
       </ul>
-      <button 
-        class='btn' 
-        onClick={() =>{
-        // 액션함수는 dispatch함수 안에 넣어야 됨
-        dispatch(handleDarkmode());
+      <button
+        className='btn'
+        onClick={() => {
+          // 액션함수는 dispatch함수 안에 넣어야 됨
+          dispatch(handleDarkmode());
 
-      }}>
+        }}>
         Dark mode
       </button>
     </nav>

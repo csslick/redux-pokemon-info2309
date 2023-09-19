@@ -53,8 +53,49 @@ ul {
   }
 }
 
+// 다크모드 스타일
 main.darkmode {
   background: #000;
   color: #fff;
 }
 
+main .form {
+  padding: 1rem 0;
+  padding-top: 10px;
+  .input-group {
+    input {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn.btn-primary { 
+  background-color: #3498db;
+  color: #fff;
+  border-style: none;
+}
+
+.btn.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.item-list {
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
